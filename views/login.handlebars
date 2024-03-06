@@ -1,0 +1,55 @@
+<div>
+    <p style="color: red; text-align: center; font-size: 34px; z-index: 100; position: relative; top: 100px;">{{message}}</p>
+</div>
+<div class="container">
+    <input type="radio" name="tab" id="signin" checked="checked" />
+    <input type="radio" name="tab" id="register" />
+    <div class="pages">
+        <form class="page" method="post" action="/login">
+            <div class="input">
+                <div class="title"><i class="material-icons">Email</i></div>
+                <input class="text" required id="emaillogin" name="username" type="text" placeholder="" />
+            </div>
+            <div class="input">
+                <div class="title"><i class="material-icons">Mot de passe</i></div>
+                <input class="text" required id="passwordlogin" name="password" type="password" placeholder="" />
+            </div>
+            <div class="input">
+                <input type="submit" id="login" value="Connecte" />
+            </div>
+        </form>
+        <form class="page signup" method="post" action="/singin">
+            <div class="input">
+                <div class="title"><i class="material-icons">Nom</i></div>
+                <input class="text" required id="nom" name="nom" type="text" placeholder="" />
+            </div>
+            <div class="input">
+                <div class="title"><i class="material-icons">Prenom</i></div>
+                <input class="text" required id="prenom" name="prenom" type="text" placeholder="" />
+            </div>
+            <div class="input">
+                <div class="title"><i class="material-icons">Email</i></div>
+                <input class="text" required id="email" name="email" type="email" placeholder="" />
+            </div>
+            <div class="input">
+                <div class="title"><i class="material-icons">Mot de passe</i></div>
+                <input class="text" required id="motdepasse" name="motdepasse" type="password" placeholder="" />
+            </div>
+            <div class="input">
+                <div class="title"><i class="material-icons">Confirmation du Mot de passe</i></div>
+                <input class="text" required id="remotdepasse" name="remotdepasse" type="password" placeholder="" />
+            </div>
+            <div class="input">
+                <input type="submit" id="singin" value="Creer un compte" />
+            </div>
+        </form>
+    </div>
+    <div class="tabs">
+        <label class="tab" for="signin">
+            <div class="text">Se connecte</div>
+        </label>
+        <label class="tab" for="register">
+            <div class="text">Creer un compte</div>
+        </label>
+    </div>
+</div>

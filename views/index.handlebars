@@ -1,0 +1,27 @@
+<section id="home">
+    <div class="left">
+        <h1>Halal Algerien Food</h1>
+        <p>
+        <h2>nos délicieux plats, avec la methode des grande mamas algeriennes et servi avec notre sauce
+            légendaire.</h2>
+        </p>
+        <button><a href="#">Gouter maintenant 😊</a></button>
+    </div>
+    <div class="right">
+        <img src="image/img1.jpg">
+    </div>
+</section>
+<!-- section  menu -->
+<section id="menu">
+    <h3 class="mini_title">Notre Menu</h3>
+    <div class="dishes">
+        {{#each produits}}
+        <div class="dish">
+            <img width="50" src="{{chemin_image}}">
+            <p>{{nom}}</p>
+            <h2>${{prix}}</h2>
+            <button id="{{id_produit}}" class="ajoutProduit">Ajouter au panier</button>
+        </div>
+        {{/each}}
+    </div>
+</section>

@@ -1,0 +1,538 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+section {
+    margin-top: 50px;
+}
+/*body {
+    position: relative;
+}*/
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: green;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+.menu {
+    display: flex;
+}
+.logo {
+    color: red;
+    font-weight: 700;
+    font-size: 25px;
+}
+.logo span {
+    color: black;
+}
+.menu li {
+   margin: 0 15px;
+   list-style: none;
+}
+.menu li a {
+    font-size: 14px;
+    text-decoration: 0;
+    color: #999;
+    position: relative;
+}
+.menu li a::before {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color:red;
+    transition: 0.5s;
+}
+.menu li a:hover::before {
+    width: 100%;
+}
+.menu li a::after {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color: red;
+    transition: 0.5s;
+}
+.menu li a:hover::after {
+    width: 100%;
+}
+.menu li a:hover {
+    color: #000;
+}
+
+/* home CSS */
+#home {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: calc(100vh - 50px);
+    justify-content: space-between;
+}
+#home .left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ 
+#home .left h1 {
+    font-size: 40px;
+}
+#home .left p {
+    font-size: 12px;
+    color: #999;
+}
+#home .left button {
+     margin-top: 20px;
+     width: fit-content;
+     padding: 5px 10px;
+     background-color: #000;
+     border: 0;
+     transition: 0.5s;
+     position: relative;
+     cursor: pointer;
+}
+#home .left button  a {
+    text-decoration: 0;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+#home .left button::before {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: red;
+}
+#home .left button:hover a{
+   letter-spacing: 1px;
+}
+
+#home .right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home .right img {
+    width: 100%;
+    animation: animate 2s linear;
+    transition: 0.5s;
+}
+
+/* animation image */
+
+@keyframes animate {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/* menu CSS */
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.05);
+    padding: 50px 10px;
+}
+.mini_title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 40px;
+    color: black;
+    text-transform: capitalize;
+}
+.title {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #273e60;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.dishes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+}
+.dishes .dish {
+    height: 280px;
+    width: 30%;
+    background-color: #fff;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    margin-bottom: 35px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+.dishes .dish  img {
+    width: 130px;
+    height: 120px;
+    margin-bottom: 15px;
+}
+.dishes .dish p {
+    text-align: center;
+    font-size: 18px;
+
+}
+.dishes .dish a {
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: 0;
+    background-color:green;
+    padding: 5px 60px;
+    color: #fff;
+    border-radius: 6px;
+}
+/*Scrollbar CSS*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: green;
+}
+
+/* footer CSS */
+
+footer {
+    background-color: rgba(0,0,0,0.05);
+}
+footer .services_list {
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.service img {
+    width: 40px;
+    background-color:green;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+}
+.service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 25px auto;
+}
+.service  p {
+    color: #333;
+}
+hr {
+    background-color: #ccc;
+    border: 0;
+    height: 2px;
+    width: 100%;
+}
+.footer_text {
+    text-align: center;
+    font-size: 15px;
+    padding: 8px 0;
+}
+.footer_text span {
+    color: black;
+}
+.toggle_menu {
+    display: none;
+}
+ 
+
+
+
+
+
+.panier{
+    display: grid;
+    background-color: rgba(255, 255, 0, 0.5);
+}
+.flex{
+    display: flex;
+}
+.w80{
+    width: 80%;
+    margin: auto;
+}
+.image{
+    width: 20%; border-radius: 25px;
+}
+.image img{
+    width: 100%;
+    height: auto;
+   
+}
+.element_panier{
+            border: 1px solid red;
+}
+.name{
+    margin: auto 50px;
+}
+.w20{
+    width: 20%;
+}
+.name h1{
+    padding: 20px 0px;
+}
+input[type=number]::-webkit-inner-spin-button {
+opacity: 1;
+}
+.totals{
+display: flex;
+width: 80%;
+margin: auto;
+text-align: right;
+}
+.w100{
+width: 100%;
+}
+.delete{
+background-color: red;
+color: white;
+padding: 30px 20px;
+cursor: pointer;
+width: max-content;
+margin-right: 0;
+    font-size: 24px;
+}
+.delete:hover{
+background-color: gray;
+color: white;
+}
+.submit{
+background-color: green;
+color: white;
+padding: 30px 20px;
+cursor: pointer;
+width: max-content;
+margin-right: 0;
+font-size: 24px;
+}
+.submit:hover{
+background-color: gray;
+color: white;
+}
+
+
+
+
+.popupmessage{
+    padding: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    opacity: 0;
+}
+
+.popuptext{
+    color: white;
+}
+
+
+
+
+.container {
+    min-height: 300px;
+    max-width: 450px;
+    margin: 15% auto;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: hi 0.5s;
+    -webkit-transform: translateZ(0px);
+}
+.container * {
+    box-sizing: border-box;
+}
+.pages {
+    flex: 1;
+    white-space: nowrap;
+    position: relative;
+    transition: all 0.4s;
+    display: flex;
+}
+.pages .page {
+    min-width: 100%;
+    padding: 20px 15px;
+    padding-top: 0px;
+    background: linear-gradient(to left, #d4ff5d, #caff6f);
+}
+.pages .page:nth-of-type(1) .input {
+    transform: translateX(-100%) scale(0.5);
+}
+.pages .page:nth-of-type(2) .input {
+    transform: translateX(100%) scale(0.5);
+}
+.pages .page .input {
+    transition: all 1s;
+    opacity: 0;
+    transition-delay: 0s;
+}
+.pages .page.signup {
+    background: linear-gradient(to left, #d4ff5d, #caff6f);
+}
+.pages .page .title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    position: relative;
+    line-height: 14px;
+}
+.pages .page .title i {
+    vertical-align: text-bottom;
+    font-size: 19px;
+}
+.pages .page .input {
+    margin-top: 20px;
+}
+.pages .page input.text {
+    background: #f6f7f9;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 10px;
+    color: rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+.pages .page input[type=submit] {
+    background: rgba(0, 0, 0, 0.5);
+    color: #f6f7f9;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.tabs {
+    max-height: 50px;
+    height: 50px;
+    display: flex;
+    background: #fff;
+}
+.tabs .tab {
+    flex: 1;
+    color: #5d708a;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.2s;
+}
+.tabs .tab .text {
+    font-size: 14px;
+    transform: scale(1);
+    transition: all 0.2s;
+}
+input[type=radio] {
+    display: none;
+}
+input[type=radio]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) {
+    box-shadow: inset -3px 2px 5px rgba(0, 0, 0, 0.25);
+    color: #3f4c7f;
+}
+input[type=radio]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) .text {
+    transform: scale(0.9);
+}
+input[type=radio]:nth-of-type(1):checked ~ .pages {
+    transform: translateX(0%);
+}
+input[type=radio]:nth-of-type(1):checked ~ .pages .page:nth-of-type(1) .input {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 0.5s;
+}
+input[type=radio]:nth-of-type(1):checked ~ .pages .page:nth-of-type(1) .input:nth-child(1) {
+    transition-delay: 0.2s;
+}
+input[type=radio]:nth-of-type(1):checked ~ .pages .page:nth-of-type(1) .input:nth-child(2) {
+    transition-delay: 0.4s;
+}
+input[type=radio]:nth-of-type(1):checked ~ .pages .page:nth-of-type(1) .input:nth-child(3) {
+    transition-delay: 0.6s;
+}
+input[type=radio]:nth-of-type(1):checked ~ .pages .page:nth-of-type(1) .input:nth-child(4) {
+    transition-delay: 0.8s;
+}
+input[type=radio]:nth-of-type(1):checked ~ .pages .page:nth-of-type(1) .input:nth-child(5) {
+    transition-delay: 1s;
+}
+input[type=radio]:nth-of-type(2):checked ~ .tabs .tab:nth-of-type(2) {
+    box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.25);
+    color: #3f4c7f;
+}
+input[type=radio]:nth-of-type(2):checked ~ .tabs .tab:nth-of-type(2) .text {
+    transform: scale(0.9);
+}
+input[type=radio]:nth-of-type(2):checked ~ .pages {
+    transform: translateX(-100%);
+}
+input[type=radio]:nth-of-type(2):checked ~ .pages .page:nth-of-type(2) .input {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 0.5s;
+}
+input[type=radio]:nth-of-type(2):checked ~ .pages .page:nth-of-type(2) .input:nth-child(1) {
+    transition-delay: 0.2s;
+}
+input[type=radio]:nth-of-type(2):checked ~ .pages .page:nth-of-type(2) .input:nth-child(2) {
+    transition-delay: 0.4s;
+}
+input[type=radio]:nth-of-type(2):checked ~ .pages .page:nth-of-type(2) .input:nth-child(3) {
+    transition-delay: 0.6s;
+}
+input[type=radio]:nth-of-type(2):checked ~ .pages .page:nth-of-type(2) .input:nth-child(4) {
+    transition-delay: 0.8s;
+}
+input[type=radio]:nth-of-type(2):checked ~ .pages .page:nth-of-type(2) .input:nth-child(5) {
+    transition-delay: 1s;
+}
+@keyframes hi {
+    from {
+        transform: translateY(50%) scale(0, 0);
+        opacity: 0;
+   }
+}

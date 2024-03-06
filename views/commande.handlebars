@@ -1,0 +1,31 @@
+<!-- commande -->
+<section>
+    <div class="title">
+        <h1>Commandes</h1>
+    </div>
+    <div class="panier">
+        <!-- commande begin -->
+        {{#each commands}}
+        <div class="flex w80 element_panier" id="commandeNo{{id_commande}}">
+            <div class="name w30">
+                <h1>id commande : {{id_commande}}</h1>
+            </div>
+            <div class="name w30">
+                <select class="etats" id="etat" name="etat{{id_commande}}-user{{id_utilisateur}}">
+                    {{#each etats}}
+                    {{#if selected}}
+                    <option value="{{id_etat_commande}}" selected>{{nom}}</option>
+                    {{else}}
+                    <option value="{{id_etat_commande}}">{{nom}}</option>
+                    {{/if}}
+                    {{/each}}
+                </select>
+            </div>
+            <div class="name w30">
+                <a href="/pan?id={{id_commande}}">lien</a>
+            </div>
+        </div>
+        {{/each}}
+        <!-- commande end -->
+    </div>
+</section>

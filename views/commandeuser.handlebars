@@ -1,0 +1,27 @@
+<!-- commande -->
+<section>
+    <div class="title">
+        <h1>Commandes</h1>
+    </div>
+    <div class="panier">
+        <!-- commande begin -->
+        {{#each commands}}
+        <div class="flex w80 element_panier">
+            <div class="name w30">
+                <h1>id commande : {{id_commande}}</h1>
+            </div>
+            <div class="name w30">
+                {{#each etats}}
+                {{#if selected}}
+                <h3>{{nom}}</h3>
+                {{/if}}
+                {{/each}}
+            </div>
+            <div class="name w30">
+                <a href="/pan?id={{id_commande}}">lien</a>
+            </div>
+        </div>
+        {{/each}}
+        <!-- commande end -->
+    </div>
+</section>

@@ -1,0 +1,42 @@
+<!-- panier -->
+<section>
+<div class="title">
+    <h1>Panier</h1>
+</div>
+<div class="panier">
+    {{#if empty}}
+    <h1>panier vide, ajouter des produits dans le menue</h1>
+    {{else}}
+    {{#each panier}}
+    <div class="flex w80 element_panier">
+        <div class="image"><img src="{{chemin_image}}"></div>
+        <div class="name w20">
+            <h1>Produit : {{nom}}</h1>
+            <h1>prix unite : {{prix}}</h1>
+        </div>
+        <div class="name w20">
+            {{#if edit}}
+            <h1>quantite : <input type="number" class="quantite" name="produit{{id_produit}}" value="{{quantite}}" /></h1>
+            {{else}}
+            <h1>quantite : {{quantite}}</h1>
+            {{/if}}
+        </div>
+        <div class="name w20">
+            <h1>prix total : ${{total}}</h1>
+        </div>
+    </div>
+    {{/each}}
+    <div class="totals">
+        <div class="w100">
+            <diV>
+                <h1>montant total: ${{prix_total}}</h1>
+            </diV>
+            {{#if edit}}
+            <button class="delete" id="delete">supprimer la commande</button>
+            <button class="submit" id="submit">passe la commande</button>
+            {{/if}}
+        </div>
+    </div>
+    {{/if}}
+</div>
+</section>
