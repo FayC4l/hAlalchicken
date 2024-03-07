@@ -2,12 +2,13 @@
     <p style="color: red; text-align: center; font-size: 34px; z-index: 100; position: relative; top: 100px;">{{message}}</p>
 </div>
 <div class="container">
+      
     <input type="radio" name="tab" id="signin" checked="checked" />
     <input type="radio" name="tab" id="register" />
     <div class="pages">
         <form class="page" method="post" action="/login">
             <div class="input">
-                <div class="title"><i class="material-icons">Email</i></div>
+                <div class="title"><i class="material-icons">Adresse Mail</i></div>
                 <input class="text" required id="emaillogin" name="username" type="text" placeholder="" />
             </div>
             <div class="input">
@@ -20,15 +21,15 @@
         </form>
         <form class="page signup" method="post" action="/singin">
             <div class="input">
-                <div class="title"><i class="material-icons">Nom</i></div>
+                <div class="title"><i class="material-icons"> Votre Nom</i></div>
                 <input class="text" required id="nom" name="nom" type="text" placeholder="" />
             </div>
             <div class="input">
-                <div class="title"><i class="material-icons">Prenom</i></div>
+                <div class="title"><i class="material-icons">Votre Prenom</i></div>
                 <input class="text" required id="prenom" name="prenom" type="text" placeholder="" />
             </div>
             <div class="input">
-                <div class="title"><i class="material-icons">Email</i></div>
+                <div class="title"><i class="material-icons">Adresse email</i></div>
                 <input class="text" required id="email" name="email" type="email" placeholder="" />
             </div>
             <div class="input">
@@ -52,4 +53,5 @@
             <div class="text">Creer un compte</div>
         </label>
     </div>
+  
 </div>

@@ -29,8 +29,8 @@
                 <li><a href="commande">commande</a></li>
                 <li><a href="panier">Votre panier</a></li>
                 {{#each isconnected}}
-                <li><a href="{{link}}">{{linkname}}</a></li>
-                <li><p>{{nom}} {{prenom}}</p></li>
+                <li ><a style="color:#BFA181 ;" href="{{link}}">{{linkname}}</a></li>
+                <li><p style="color:#BFA181 ; font-size: medium;">{{nom}} {{prenom}}</p></li>
                 {{/each}}
             </ul>
 
@@ -40,10 +40,7 @@
     </header>
 
     <main>
-        {{{body}}}
-        <div class="popupmessage" id="popup">
-            <h1 class="popuptext" id="popuptext">its me mario</h1>
-        </div>
+        {{{body}}}       
     </main>
 
     <footer>
